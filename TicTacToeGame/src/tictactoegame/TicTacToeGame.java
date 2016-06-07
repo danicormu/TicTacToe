@@ -5,6 +5,10 @@
  */
 package tictactoegame;
 
+import Controller.GameController;
+import Model.GameModel;
+import View.GameView;
+
 /**
  *
  * @author Daniel
@@ -16,6 +20,12 @@ public class TicTacToeGame {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        //Singleton applied
+        GameModel game = GameModel.getInstance();
+        GameView mainView = new GameView();
+        GameController controller = new GameController(mainView, game);
+        controller.showView();
+        mainView.setVisible(true);
     }
     
 }
