@@ -19,10 +19,13 @@ public class GameModel {
                                 {"", "", ""},
                                 {"", "", ""}};
     
+    //Constructor
     private GameModel(){};
     
+    //Varible is private and static and it should refer to the instance
     private static GameModel gameInstance = new GameModel();
     
+    //Accesor function
     public static GameModel getInstance(){
         return gameInstance;
     }
